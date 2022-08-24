@@ -63,7 +63,6 @@ const sendGetRequest = async (req, res) => {
     try {
         const resp = await axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${key}&ids=BTC,ETH,XRP&interval=1h,1d,30d,ytd&convert=NGN&platform-currency=ETH&per-page=100&page=1`)
             .then((res) => {
-                res.setHeader("Access-Control-Allow-Origin", "https://api.nomics.com/v1/currencies/ticker?key=${key}&ids=BTC,ETH,XRP&interval=1h,1d,30d,ytd&convert=NGN&platform-currency=ETH&per-page=100&page=1");
                 const data = res.data;
                 console.log(data)
                 function priceChanger() {
