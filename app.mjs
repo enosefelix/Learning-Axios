@@ -112,4 +112,4 @@ sendGetRequest();
 //     console.log(`Server running at http://${hostname}:${port}/`);
 // })
 
-module.exports = sendGetRequest;
+export default sendGetRequest ;
