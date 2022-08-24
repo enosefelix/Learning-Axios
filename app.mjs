@@ -61,6 +61,7 @@ const key = '235fbb9de9369f8318430a5e3f1c03d13b2d21fc'
 
 const sendGetRequest = async (req, res) => {
     try {
+        response.setHeader("Access-Control-Allow-Origin", "https://api.nomics.com/v1/currencies/ticker?key=${key}&ids=BTC,ETH,XRP&interval=1h,1d,30d,ytd&convert=NGN&platform-currency=ETH&per-page=100&page=1");
         const resp = await axios.get(`https://api.nomics.com/v1/currencies/ticker?key=${key}&ids=BTC,ETH,XRP&interval=1h,1d,30d,ytd&convert=NGN&platform-currency=ETH&per-page=100&page=1`)
             .then((res) => {
                 const data = res.data;
